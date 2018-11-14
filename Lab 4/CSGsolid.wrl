@@ -96,14 +96,16 @@ geometry FGeometry {
 	shape1=1-(x/2)^2-(y)^2-(z)^2;
 	shape2=0.25^2-x^2-y^2;
 	shape3=(x/0.5)+(y/0.5)-1;
+	shape4=(x^2+y^2)/(0.5/0.5)^2-z^2;
 
 	final=min(shape1, -shape2);
 	final=min(final, -shape3);
+	final=max(final, shape4);
 	return final;}"
 
 # Adjust the tight bounding box and an optimal resolution
 bboxCenter 0 0 0
-bboxSize 4 2 2
+bboxSize 2 2 2
 resolution [100 100 100]
 
  }     
