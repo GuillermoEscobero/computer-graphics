@@ -94,16 +94,16 @@ geometry FGeometry {
 # shape1=0.7^6-x^6-y^6-z^6;
 	definition "function frep(x,y,z,t){
 	
-	shape1=1-(x)^2-(y/0.5)^2-(z/0.5)^2;
-	shape4=((x)^2+z^2)/(0.5/0.5)^2-(y+0.5)^2;
+	ellipsoid=1-(x)^2-(y/0.5)^2-(z/0.5)^2;
+	cone=((x)^2+z^2)/(0.5/0.75)^2-(y+0.5)^2;
 
-	shape2=0.25^2-x^2-z^2;
-	shape3=(x/0.5)+(y/0.5)-1;
+	cylinder=0.25^2-x^2-y^2;
+	plane=1-(x/0.5)-(y/0.5);
 	
 
-	final=min(shape1, -shape4);
-	final=min(final, -shape2);
-	final=min(final, -shape3);
+	final=min(ellipsoid, -cone);
+	final=max(final, cylinder);
+	final=min(final, plane);
 
 	return final;}"
 
