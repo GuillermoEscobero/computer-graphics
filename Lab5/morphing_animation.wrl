@@ -96,7 +96,7 @@ Transform{
 children[
       FShape {
           geometry FGeometry {
-              resolution [50 50]
+              resolution [35 35]
               parameters [0 1 0 1]
               definition "
                  function parametric_x(u,v,w,t)
@@ -138,7 +138,7 @@ loop TRUE
 cycleInterval 7
 
 geometry FGeometry {
-resolution [50 50]
+resolution [35 35]
 parameters [0 1 0 1]
 # Definition of the animated linear transformation (morphing)
 # of one surface defined by     x1(u,v), y1(u,v), z1(u,v) 
@@ -180,7 +180,7 @@ Transform{
    children[
       FShape {
           geometry FGeometry {
-              resolution [50 50]
+              resolution [35 35]
               parameters [0 1 0 1]
               definition "
                  function parametric_x(u,v,w,t)
